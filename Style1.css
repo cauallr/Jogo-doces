@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: blueviolet;
+  }
+  
+  #Cabecalho {
+    text-align: center;
+    background-color: rgb(216, 126, 193);
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  #Cabecalho h1 {
+    margin: 0;
+  }
+  
+  #Pontape {
+    text-align: center;
+    background-color: lightpink;
+    padding: 10px;
+  }
+  
+  #Pontape h2 {
+    margin: 0;
+    text-align: center;
+  }
+  
+  #cupcake-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .cupcake {
+    background-color: rgb(216, 126, 193);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .cupcake img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  #money{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  #click-button{
+    background-color: green;
+    padding: 15px;
+    outline: none;
+    border: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    transition: all 0.5s;
+  }
+  form input:focus{
+    border-radius: 16px;
+}
+ 
+  
+  
+  
+  
+  
+  
+ 
+  
+  /* ... (código anterior) ... */
+
+
+  
+  
+  /* ... (código posterior) ... */
+  
+  

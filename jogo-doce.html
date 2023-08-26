@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style1.css">
+    <title>Jogo de cupcakes</title>
+</head>
+<body>
+    <div id="Cabecalho">
+        <h1>Jogo do lucas</h1>
+    </div>
+    <h1 id="titulo">Compre Doces</h1>
+    <p>Dinheiro: <span id="money">R$ 0</span> reais</p>
+    <p>Valor do Clique: <span id="click-value">R$ 1</span> real</p>
+    <p>Melhorias de Clique: <span id="upgrade-count">0</span></p>
+    <button id="click-button">Clique para ganhar dinheiro</button>
+
+    <div id="cupcake-container">
+        <!-- Adicione os cupcakes aqui -->
+        <div class="cupcake" onclick="buyCupcake(0)" data-price="5.00" data-index="0">
+            <h3>Cupcake de Morango</h3>
+            <img src="https://lh3.googleusercontent.com/pw/AIL4fc-eNjPL920OkGlIhuxlRPvBIiOxoCBX7iuJ35HIPYveVyPFE2XdY9ibr7kNO7XEWk9KKIzvkkoij4OfAaLoxcAkavMcCXyvWkcGKOqEpuyK63IUR16A0lOa_tAEmy6yP0rOHTeb_2UCFv3w-U9jAVZR=w894-h894-s-no?authuser=0" alt="">
+            <p>R$ 5.00 <br>
+              valor de clique + R$ 1,00 </br></p>
+            <p>Quantidade comprada: <span class="cupcake-count">0</span></p>
+            <button class="buy-button" onclick="buyCupcake(0)">Comprar</button>
+        </div>
+
+        <div class="cupcake" onclick="buyCupcake(1)" data-price="100.00" data-index="1">
+            <h3>Cupcake de Chocolate</h3>
+            <img src="https://lh3.googleusercontent.com/pw/AIL4fc9v-4q8jrCWTV_YMAEK4EFP7X3msWKvbZ_lvk0ne14tlS2CvBjf-oTZhgcLJ49CEor1o8Um9O0QAyeEllEUtITO1J_4C2yYzPT23aYjlg00fxqI1tqZ1aSvIWf0qc37P3VPeR6pAc6tbsuL-fq0VafN=w417-h626-s-no?authuser=0" alt="">
+            <p>R$ 100.00 <br>
+              valor de clique + R$ 2,00 </br> </p>
+            <p>Quantidade comprada: <span class="cupcake-count">0</span></p>
+            <button class="buy-button" onclick="buyCupcake(1)">Comprar</button>
+        </div>
+        <div class="cupcake" onclick="buyCupcake(2)" data-price= "350.00" data-index="2">
+            <h3>Cupcake de Limão</h3>
+            <img src="https://lh3.googleusercontent.com/pw/AIL4fc8I7uECLFnbeXkUpmmu2StdSkYDtn_Z0ivW9W_8FdSeigjT_3uVg3hHOjgwGZ3ScMbx2nbCaB8xQLFFqgniFRwXLNGmIQN_eEINHcX26nRc3eOd7HcAbiorOWvexIXFVJXW6P4Oi2PqdU6ZOoNT2Q3U=w894-h894-s-no?authuser=0" alt="">
+            <p>R$ 350.00<br>
+              valor de clique + R$ 3,00</br></p>
+            <p>Quantidade comprada: <span class="cupcake-count">0</span></p>
+            <button class="buy-button" onclick="showAddressForm()">Comprar</button>
+        </div>
+        <div class="cupcake" onclick="buyCupcake(3)"data-price = "750.00" data-index="3">
+            <h3>Bolo de chocolate</h3>
+            <img src="https://lh3.googleusercontent.com/pw/AIL4fc99zM0E_OkpcYLwFZLW2gXqFbryNZPvz-hSMFGw0EGBhidNCYuAkI2Qt0k2H44fFUz1mWZdU1CigyDzg1HdGpW359f7X3FeuyKA15lmoyWUDb8xZP58qiRQ4tTc4OaHN4WWcn56DTuaSjMPjlkLMP1f=w894-h894-s-no?authuser=0" alt="">
+            <p>R$ 750.00 <br>
+              valor de clique + R$ 4,00 </br> </p>
+            <p>Quantidade comprada: <span class="cupcake-count">0</span></p>
+            <button class="buy-button" onclick="showAddressForm()">Comprar</button>
+        </div>
+        <div class="cupcake" onclick="buyCupcake(4)" data-price = "1500.00" data-index="4">
+            <h3>Jujuba</h3>
+            <img src="https://lh3.googleusercontent.com/pw/AIL4fc-PkCCGeDz84K6T-oOmtL-2lI0xYrQDfKJyaRHKdyxTU7Jj1ZfoZd4h7twwRoNyYNw8fH2O_Z3jak4yxZw8Xxe-CK0W6HRNx02PhQzkm-2tGO-xbXjYVYioh-CTMPsWvz-G8ioyYeGe0Nt6gOd1WgNL=w225-h225-s-no?authuser=0" alt="">
+            <p>R$ 1500.00 <br>
+              valor de clique + R$ 5,00 </br> </p>
+            <p>Quantidade comprada: <span class="cupcake-count">0</span></p>
+            <button class="buy-button" onclick="showAddressForm()">Comprar</button>
+        </div>
+        <div class="cupcake" onclick="buyCupcake(5)" data-price=" 2250.00" data-index="5">
+            <h3>Barra de chocolate</h3>
+            <img src="https://lh3.googleusercontent.com/pw/AIL4fc88M8ynER9rgcbp0IRBXttPbsb2AGsEPdpDw3PTnkhVCZfcr1mHvvCCiNttX1VWCLByE4IiTl3ExsoCxe7FBMvLBMTDErH0ZZ6u_eem3ZJ50QlKVcfOqx8kvX6GFl5YHgXN2Bsn5Cn3jjoX21OhpK-5=w512-h512-s-no?authuser=0" alt="">
+            <p>R$ 2250.00 <br>
+              valor de clique + R$ 6,00 </br> </p>
+            <p>Quantidade comprada: <span class="cupcake-count">0</span></p>
+            <button class="buy-button" onclick="showAddressForm()">Comprar</button>
+        </div>
+        <div class="cupcake" onclick="buyCupcake(6)" data-price="3000.00" data-index="6">
+            <h3>Ursinho de Chocolate</h3>
+            <img src="https://lh3.googleusercontent.com/pw/AIL4fc9Yb6bsDMNiamyfA3C0iAzrc1MOfp9GrZGywxAt0i3-LxRIkJnsNLqhUY8y-iLJUSPXLwascGnBfV7nrk0lnC_GGBZyYXUBSLR2Vp2SwL2i0nc6SB0-WdpYbi91vTnJ92qidhgfVr2qy69RFDAKzYMc=w225-h225-s-no?authuser=0" alt="">
+            <p>R$ 3000.00 <br>
+              valor de clique + R$ 7,00 </br> </p>
+            <p>Quantidade comprada: <span class="cupcake-count">0</span></p>
+            <button class="buy-button" onclick="showAddressForm()">Comprar</button>
+        </div>
+        <div class="cupcake" onclick="buyCupcake(7)" data-price="4000.00" data-index="7">
+            <h3>Pudim</h3>
+            <img src="https://lh3.googleusercontent.com/pw/AIL4fc_an6CnSJk9WZGp7wXIj6vRHFLWLwbCO84_DXpGXbmUb-4sgHuzS6_ry-ZgYbo6CwAJqjk0ajdjnAcdii053427Rq3UShfLckliXGJQ-gGHsHQd-mLRyptXOiUsuXamh2joFx65HzwCUZ6nPDuArIdQ=w225-h225-s-no?authuser=0" alt="">
+            <p>R$ 4000.00 <br>
+              valor de clique + R$ 8,00 </br> </p>
+            <p>Quantidade comprada: <span class="cupcake-count">0</span></p>
+            <button class="buy-button" onclick="showAddressForm()">Comprar</button>
+        </div>
+        <div class="cupcake" onclick="buyCupcake(8)" data-price="5000.00" data-index="8">
+            <h3>Sorvete</h3>
+            <img src="https://lh3.googleusercontent.com/pw/AIL4fc9zADC_RK2-i5b-Qn1cZBC_GgqO8zc00cRXH2yjSNnE6rTWhtnQ13cIm1XrHbf-2fbMjCO98CTrhdkU86EnqbwJgIEAcA6BuGKE69dLpLtCNKSMWJMHeyRHAUynwgSw_af8ajKyHMOo3jKMk1BOxyoa=w360-h360-s-no?authuser=0" alt="">
+            <p>R$ 5000.00 <br> 
+              valor de clique + R$ 9,00 </br> </p>
+            <p>Quantidade comprada: <span class="cupcake-count">0</span></p>
+            <button class="buy-button" onclick="showAddressForm()">Comprar</button>
+    </div>
+    <div id="footer">
+        <p>&copy; 2023 caua's Cake</p>
+    </div>
+
+    <script>
+        let money = 0,
+            clickValue = 1,
+            upgradeCount = 0,
+            cupcakes = [
+                { name: 'Cupcake de Morango', image: 'morango.jpeg', price: 5.00 },
+                { name: 'Cupcake de Chocolate', image: 'https://lh3.googleusercontent.com/...', price: 100.00 },
+                { name: 'Cupcake de Limão', image: 'https://lh3.googleusercontent.com/...', price: 350.00 },
+                { name: 'Bolo de chocolate', image: 'https://lh3.googleusercontent.com/...', price: 750.00 },
+                { name: 'Jujuba', image: 'https://lh3.googleusercontent.com/...', price: 1500.00 },
+                { name: 'Barra de chocolate', image: 'https://lh3.googleusercontent.com/...', price: 2250.00 },
+                { name: 'Ursinho de Chocolate', image: 'https://lh3.googleusercontent.com/...', price: 3000.00 },
+                { name: 'Pudim', image: 'https://lh3.googleusercontent.com/...', price: 4000.00 },
+                { name: 'Sorvete', image: 'https://lh3.googleusercontent.com/...', price: 5000.00 },
+                // Adicione mais cupcakes da mesma forma
+            ];
+
+        const moneyDisplay = document.getElementById('money'),
+            clickValueDisplay = document.getElementById('click-value'),
+            upgradeCountDisplay = document.getElementById('upgrade-count');
+
+        document.getElementById('click-button').addEventListener('click', () => {
+            money += clickValue;
+            moneyDisplay.textContent = money.toFixed(2);
+        });
+
+        const buyButtons = document.querySelectorAll('.buy-button');
+        buyButtons.forEach((buyButton, index) => {
+            buyButton.addEventListener('click', () => {
+                const cupcake = cupcakes[index];
+                if (money >= cupcake.price) {
+                    money -= cupcake.price;
+                    moneyDisplay.textContent = money.toFixed(2);
+                    clickValue += index + 1;
+                    clickValueDisplay.textContent = clickValue.toFixed(2);
+                    upgradeCount++;
+                    upgradeCountDisplay.textContent = upgradeCount;
+                    const cupcakeCountDisplay = buyButton.parentElement.querySelector('.cupcake-count');
+                    const priceDisplay = buyButton.parentElement.querySelector('p');
+                    cupcake.price *= 1.5; // Atualiza o preço do cupcake
+                    priceDisplay.textContent = `R$ ${cupcake.price.toFixed(2)}`;
+                    cupcakeCountDisplay.textContent = parseInt(cupcakeCountDisplay.textContent) + 1;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
